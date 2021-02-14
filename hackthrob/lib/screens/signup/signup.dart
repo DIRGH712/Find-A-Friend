@@ -30,7 +30,7 @@ class SignUpScreen extends StatelessWidget {
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(320.0, 175.0, 0.0, 0.0),
+                    padding: EdgeInsets.fromLTRB(313.0, 175.0, 0.0, 0.0),
                     child: Text('.',
                         style: TextStyle(
                             fontSize: 80.0,

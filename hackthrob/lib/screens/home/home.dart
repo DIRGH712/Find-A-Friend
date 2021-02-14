@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Find 'A' Friend",
+          "Find A Friend",
           style: GoogleFonts.notoSans(
             color: Colors.black87,
             fontWeight: FontWeight.w700,
@@ -30,13 +30,14 @@ class HomeScreen extends StatelessWidget {
                   "Let's be Friends!",
                   style: headlineStyle,
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.all(34.0),
-                //   child: Text(
-                //     "Click on Get Started button to connect with someone",
-                //     style: contentStyle,
-                //   ),
-                // ),
+                Padding(
+                  padding: const EdgeInsets.all(34.0),
+                  child: Text(
+                    "Click on Get Started button to find random friends",
+                    style: contentStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ],
             ),
             Column(
