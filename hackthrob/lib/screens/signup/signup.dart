@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hackthrob/services/authentication_services.dart';
 import 'package:provider/provider.dart';
 
-class LoginScreen extends StatelessWidget {
+class SignUpScreen extends StatelessWidget {
   TextEditingController _email = TextEditingController();
   TextEditingController _password = TextEditingController();
   @override
@@ -18,13 +18,13 @@ class LoginScreen extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     padding: EdgeInsets.fromLTRB(15.0, 110.0, 0.0, 0.0),
-                    child: Text('Hello',
+                    child: Text('Create',
                         style: TextStyle(
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(16.0, 175.0, 0.0, 0.0),
-                    child: Text('There',
+                    child: Text('Account',
                         style: TextStyle(
                             fontSize: 80.0, fontWeight: FontWeight.bold)),
                   ),
@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                   children: <Widget>[
                     TextField(
                       decoration: InputDecoration(
-                        labelText: 'E-Mail',
+                        labelText: 'Enter E-Mail',
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -59,7 +59,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(height: 20.0),
                     TextField(
                       decoration: InputDecoration(
-                        labelText: 'Password',
+                        labelText: 'Create Password',
                         labelStyle: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.bold,
@@ -82,14 +82,14 @@ class LoginScreen extends StatelessWidget {
                         elevation: 7.0,
                         child: GestureDetector(
                           onTap: () {
-                            context.read<AuthenticationService>().signIn(
+                            context.read<AuthenticationService>().signUp(
                                   email: _email.text.trim(),
                                   password: _password.text.trim(),
                                 );
                           },
                           child: Center(
                             child: Text(
-                              'LOGIN',
+                              'SIGNUP',
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,

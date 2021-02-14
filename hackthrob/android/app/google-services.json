@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "568800120717",
+    "project_id": "hackthrob2021",
+    "storage_bucket": "hackthrob2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568800120717:android:d23f5509184dfdd8f0f7c4",
+        "android_client_info": {
+          "package_name": "com.example.hackthrob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568800120717-65pgiql2s297b5871d47r77142su2l13.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJgqDHDnc1YOwa2QGxWpa-Uv9GEoIeGMs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568800120717-65pgiql2s297b5871d47r77142su2l13.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
