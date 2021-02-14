@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.amberAccent[100],
+        backgroundColor: Colors.red[300],
       ),
       body: Center(
         child: Column(
@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => ShowProfiles()));
                   },
-                  color: Colors.amber[400],
+                  color: Colors.greenAccent,
                 ),
                 RaisedButton(
                   child: Text("Sign Out"),

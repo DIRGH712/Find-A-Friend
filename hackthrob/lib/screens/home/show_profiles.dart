@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:hackthrob/screens/messaging_screen.dart';
 
 List<String> names = ["Nishita Singh", "Raghav Kumar", "Satyam Jain"];
 List<String> bios = [
@@ -75,8 +76,15 @@ class UserTile extends StatelessWidget {
               "Connect",
               style: contentStyle,
             ),
-            onPressed: () {},
-            color: Colors.amber,
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => MessagingScreen(
+                            name: name,
+                          )));
+            },
+            color: Colors.red[400],
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
           ),

@@ -80,7 +80,7 @@ class LoginScreen extends StatelessWidget {
                       child: Material(
                         borderRadius: BorderRadius.circular(20.0),
                         shadowColor: Colors.amberAccent,
-                        color: Colors.amber,
+                        color: Colors.amber[600],
                         elevation: 7.0,
                         child: FlatButton(
                           child: Center(
@@ -110,34 +110,6 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 20.0),
-                    Container(
-                      height: 40.0,
-                      color: Colors.transparent,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(
-                                color: Colors.black,
-                                style: BorderStyle.solid,
-                                width: 1.0),
-                            color: Colors.transparent,
-                            borderRadius: BorderRadius.circular(20.0)),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Center(
-                              child: ImageIcon(AssetImage('assets/google.png')),
-                            ),
-                            SizedBox(width: 10.0),
-                            Center(
-                              child: Text('Log in with Google',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Montserrat')),
-                            )
-                          ],
-                        ),
-                      ),
-                    )
                   ],
                 )),
             SizedBox(height: 15.0),
@@ -145,7 +117,7 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  'New to Spotify ?',
+                  'New to our platform?',
                   style: TextStyle(fontFamily: 'Montserrat'),
                 ),
                 SizedBox(width: 5.0),
@@ -157,7 +129,7 @@ class LoginScreen extends StatelessWidget {
                             builder: (context) => SignUpScreen()));
                   },
                   child: Text(
-                    'Register',
+                    'Create Account',
                     style: TextStyle(
                         color: Colors.green,
                         fontFamily: 'Montserrat',
