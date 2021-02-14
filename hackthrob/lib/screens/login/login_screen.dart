@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hackthrob/screens/home/home.dart';
+import 'package:hackthrob/screens/signup/signup.dart';
 import 'package:hackthrob/services/authentication_services.dart';
 import 'package:provider/provider.dart';
 
 class LoginScreen extends StatelessWidget {
-  TextEditingController _email = TextEditingController();
-  TextEditingController _password = TextEditingController();
+  final TextEditingController _email = TextEditingController();
+  final TextEditingController _password = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -80,13 +82,7 @@ class LoginScreen extends StatelessWidget {
                         shadowColor: Colors.amberAccent,
                         color: Colors.amber,
                         elevation: 7.0,
-                        child: GestureDetector(
-                          onTap: () {
-                            context.read<AuthenticationService>().signIn(
-                                  email: _email.text.trim(),
-                                  password: _password.text.trim(),
-                                );
-                          },
+                        child: FlatButton(
                           child: Center(
                             child: Text(
                               'LOGIN',
@@ -96,6 +92,20 @@ class LoginScreen extends StatelessWidget {
                                   fontFamily: 'Montserrat'),
                             ),
                           ),
+                          onPressed: () async {
+                            String result = await context
+                                .read<AuthenticationService>()
+                                .signIn(
+                                  email: _email.text.trim(),
+                                  password: _password.text.trim(),
+                                );
+                            if (result == "Signed in") {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => HomeScreen()));
+                            }
+                          },
                         ),
                       ),
                     ),
@@ -141,7 +151,10 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(width: 5.0),
                 InkWell(
                   onTap: () {
-                    Navigator.of(context).pushNamed('/signup');
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SignUpScreen()));
                   },
                   child: Text(
                     'Register',
