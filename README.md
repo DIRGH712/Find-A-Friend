@@ -5,4 +5,5 @@ your friendship from there!</br>
 
 We built it using the Flutter framework and have used Firebase for authentication. The UI was designed using Figma.
 
-[Click here for Demo!](https://youtu.be/wQBcaFZ74l4)
+[Click here for Demo!](https://youtu.be/wQBcaFZ74l4) </br>
+[Devpost link!](https://devpost.com/software/find-a-friend-ch5w4q)
